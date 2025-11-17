@@ -22,14 +22,9 @@ jobs:
         run: |
           npm install -g wrangler
           npm install -d
-      - name: Configure Wrangler
+      - name: Publish Worker to Cloudflare
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-        run: |
-          export
-          echo $CLOUDFLARE_ACCOUNT_ID
-
-      - name: Publish Worker to Cloudflare
         run: |
           npm run deploy
