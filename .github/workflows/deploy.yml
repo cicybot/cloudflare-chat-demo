@@ -22,7 +22,6 @@ jobs:
         run: |
           npm install -g wrangler
           npm install -d
-
       - name: Configure Wrangler
         run: |
           export
